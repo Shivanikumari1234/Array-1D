@@ -1,0 +1,30 @@
+// write a program to find ascending number
+import java.util.Scanner;
+public class A51 {
+    public static void main(String [] args)
+    {
+        int a[]=new int[10]; int temp;
+    System.out.print("Enter the array Element");
+    Scanner r=new Scanner(System.in);
+    for(int i=0;i<10;i++)
+    {
+       a[i]= r.nextInt();
+    }for(int i=0;i<10;i++)
+    {
+        for(int j=i+1;j<10;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+        for(int i=0;i<10;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+
+    }
+}
